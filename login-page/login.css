@@ -1,0 +1,71 @@
+body {
+  background-color: black;
+}
+
+button {
+  font-size: 1.3em;
+}
+
+#title {
+  color: red;
+
+  font-size: 3em;
+  text-align: center;
+}
+#homebtn-div {
+  text-align: center;
+}
+
+#home-btn {
+  background-color: red;
+  color: aliceblue;
+}
+
+#logout-btn {
+  background-color: red;
+  color: aliceblue;
+}
+
+#input-div {
+  color: red;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+#username-input {
+  background-color: red;
+  color: aliceblue;
+  font-size: 1.2em;
+}
+
+#password-input {
+  background-color: red;
+  color: aliceblue;
+  font-size: 1.2em;
+}
+
+#loginbtn-div {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#login-btn {
+  background-color: red;
+  color: aliceblue;
+}
+
+#register-btn {
+  background-color: red;
+  color: aliceblue;
+}
+
+#wrongdetails-text {
+  color: red;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+#dashboard-link {
+  color: red;
+  font-size: 1.3em;
+}

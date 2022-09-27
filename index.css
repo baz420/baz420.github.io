@@ -1,0 +1,41 @@
+#header {
+  background-color: black;
+  height: 110px;
+  text-align: center;
+}
+
+#title {
+  color: red;
+  font-size: 3em;
+}
+
+body {
+  background-color: black;
+}
+
+#loginpage-btn {
+  background: linear-gradient(to top right, red, black);
+  color: aliceblue;
+  font-size: 1.3em;
+  width: 90px;
+  height: 50px;
+  margin-top: 10px;
+}
+#loginpage-btn:hover {
+  background: linear-gradient(to left, red, black);
+}
+
+#content {
+  background-color: black;
+  background-attachment: fixed;
+  background-position-y: -1500px;
+  background-repeat: no-repeat;
+
+  height: 3000px;
+}
+
+#footer {
+  background-color: aliceblue;
+  color: red;
+  padding: 5px;
+}
