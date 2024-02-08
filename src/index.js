@@ -11,6 +11,8 @@ import * as a1lib from "@alt1/base";
      var mainImgref = a1lib.capture(alt1.screenX,alt1.screenY,1000, 1000);
 
     // var imagebuffer = imgref.toDrawableData()
+
+
     
     // imagebuffer.show()
 
@@ -23,10 +25,11 @@ import * as a1lib from "@alt1/base";
         var imgref = a1lib.capture(100,100,400,400);
 
 // Retrieve our raw pixel data so we can directly read it
-    var imagebuffer = imgref.toData();
+        var imagebuffer = imgref.toData();
 
 // Show the image by adding it to the DOM (for debugging)
-    imagebuffer.show();
+        imagebuffer.show()
+        console.log(imagebuffer)
     }
    
     captureScreen();
