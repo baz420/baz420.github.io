@@ -1,8 +1,8 @@
 {
 	"appName": "Baz",
 	"description": "yo",
-	"appUrl": "./docs/index.html",
-	"configUrl": "./appconfig.json",
+	"appUrl": "docs/index.html",
+	"configUrl": "appconfig.json",
 	"iconUrl": "",
 	"defaultWidth": 250,
 	"defaultHeight": 250,
