@@ -1,12 +1,15 @@
+
+
 import * as a1lib from "@alt1/base";
 
 
      const pageTitleEl = document.querySelector("#title")
     // const val = a1lib.getMousePosition()
+    const imgEl = document.getElementById("img-el");
 
     // pageTitleEl.textContent = `X: ${val.x}, Y: ${val.y}`
      
-    
+
  
      var mainImgref = a1lib.capture(alt1.screenX,alt1.screenY,1000, 1000);
 
@@ -28,8 +31,8 @@ import * as a1lib from "@alt1/base";
         var imagebuffer = imgref.toData();
 
 // Show the image by adding it to the DOM (for debugging)
-        imagebuffer.show()
-        console.log(imagebuffer)
+       
+        imgEl.innerHTML = imagebuffer.show();
     }
    
     captureScreen();
