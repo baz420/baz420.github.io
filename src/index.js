@@ -4,8 +4,6 @@ import * as a1lib from "@alt1/base"
  const imageBuffer = imageData.data();
  imageBuffer.show();
 
-console.log("hello");
-
 
 
 
