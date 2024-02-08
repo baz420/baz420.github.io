@@ -6,7 +6,7 @@ import * as a1lib from "@alt1/base";
 
     // pageTitleEl.textContent = `X: ${val.x}, Y: ${val.y}`
      
-
+    
  
      var mainImgref = a1lib.capture(alt1.screenX,alt1.screenY,1000, 1000);
 
