@@ -1,7 +1,7 @@
 import * as a1lib from "@alt1/base"
 
 import "./index.html";
-import "../appconfig.json";
+import "./appconfig.json";
 
 // const imgContainer = document.getElementById("img-container");
 //  var imageData = a1lib.capture(100,100,400,400);
