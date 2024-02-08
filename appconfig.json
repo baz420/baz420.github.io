@@ -3,7 +3,7 @@
 	"description": "yo",
 	"appUrl": "./docs/index.html",
 	"configUrl": "./appconfig.json",
-	"iconUrl": "",
+	"iconUrl": "./docs/yo.png",
 	"defaultWidth": 250,
 	"defaultHeight": 250,
 	"minWidth": 250,
