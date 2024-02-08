@@ -24,7 +24,9 @@ import * as a1lib from "@alt1/base";
         const x = await mainImgref.pixelCompare(imageData, 0, 0, 900)
         console.log(x)
     }
-    const captureScreen = () => {
+
+
+    
         var imgref = a1lib.capture(100,100,400,400);
 
 // Retrieve our raw pixel data so we can directly read it
@@ -33,9 +35,6 @@ import * as a1lib from "@alt1/base";
 // Show the image by adding it to the DOM (for debugging)
        
         imagebuffer.show();
-    }
-   
-    captureScreen();
 
     
     // pixelCompare(imageData, 0, 0, 900)
