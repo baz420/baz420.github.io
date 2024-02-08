@@ -32,7 +32,7 @@ import * as a1lib from "@alt1/base";
 
 // Show the image by adding it to the DOM (for debugging)
        
-        imgEl.innerHTML = imagebuffer.show();
+        imagebuffer.show();
     }
    
     captureScreen();
