@@ -18,11 +18,10 @@ const myOutput = document.getElementById("myOutput");
 
 const printMousePosition = () => {
 	let mousePos = a1lib.getMousePosition();
-	
-		myOutput.textContent = `X: ${mousePos.x}, Y: ${mousePos.y}`;
+	myOutput.textContent = `X: ${mousePos.x}, Y: ${mousePos.y}`;
 }
 
-document.addEventListener("mousemove", printMousePosition);
+setInterval(printMousePosition, 100)
 
 
 
