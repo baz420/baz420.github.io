@@ -28,7 +28,7 @@ const flashText = () => {
 }
 
 setInterval(printMousePosition, 100)
-setInterval(flashText, 1)
+setInterval(flashText, 1000)
 
 
  
