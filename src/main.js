@@ -12,9 +12,8 @@ import "./appconfig.json";
 //  imgContainer.appendChild(imgCanvas);
 const myOutput = document.getElementById("myOutput");
 
-while (true) {
-	myOutput.textContent = alt1.mousePosition;
-}
+myOutput.textContent = alt1.mousePosition;
+
 
 
 
