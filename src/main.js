@@ -10,6 +10,13 @@ import "./appconfig.json";
 //  var imgCanvas = imageBuffer.show();
 
 //  imgContainer.appendChild(imgCanvas);
+const myOutput = document.getElementById("myOutput");
+
+while (true) {
+	myOutput.textContent = alt1.mousePosition;
+}
+
+
 
 
  
