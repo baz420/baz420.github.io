@@ -18,6 +18,12 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 
 
+
+
+const printWorld = () => {
+	worldText.textContent = `World: ${alt1.currentWorld}`
+}
+
 const printMousePosition = () => {
 	let mousePos = a1lib.getMousePosition();
 	mousePositionText.textContent = `X: ${mousePos.x}, Y: ${mousePos.y}`;
@@ -29,17 +35,9 @@ const flashText = (paragraph) => {
 	paragraph.style.color = `hsl(${Math.floor(Math.random() * 359)},100%,30%)`;
 }
 
-const printWorld = () => {
-	worldText.textContent = `World: ${alt1.currentWorld}`
-}
 
-
-const onTick = () => {
-	printWorld();
-	printMousePosition();
-
-}
-setInterval(onTick, 600);
+setInterval(printWorld, 1);
+setInterval(printMousePosition, 1);
 
  
 var output = document.getElementById("output");
