@@ -38,7 +38,6 @@ const onTick = () => {
 	printWorld();
 	printMousePosition();
 	flashText(worldText);
-	setTimeout(null, 1)
 	flashText(mousePositionText);
 
 }
