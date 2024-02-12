@@ -20,7 +20,7 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 const printMousePosition = () => {
 	let mousePos = a1lib.getMousePosition();
-	myOutput.textContent = `X: ${mousePos.x}, Y: ${mousePos.y}`;
+	mousePositionText.textContent = `X: ${mousePos.x}, Y: ${mousePos.y}`;
 	
 	
 }
@@ -30,15 +30,13 @@ const flashText = (paragraph) => {
 }
 
 const printWorld = () => {
-
+	worldText.textContent = `World: ${alt1.currentWorld}`
 }
 
 
 const onTick = () => {
 	printWorld();
 	printMousePosition();
-	flashText(worldText);
-	flashText(mousePositionText);
 
 }
 setInterval(onTick, 600);
