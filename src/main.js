@@ -19,11 +19,16 @@ const myOutput = document.getElementById("myOutput");
 const printMousePosition = () => {
 	let mousePos = a1lib.getMousePosition();
 	myOutput.textContent = `X: ${mousePos.x}, Y: ${mousePos.y}`;
+	
+	
+}
+
+const flashText = () => {
+	myOutput.style.color = `hsl(${Math.floor(Math.random() * 359)},100%,30%)`;
 }
 
 setInterval(printMousePosition, 100)
-
-
+setInterval(flashText, 1)
 
 
  
