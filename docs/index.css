@@ -5,11 +5,13 @@ body {
 
 
 #mainTitle {
+    background-color: #333;
     color: goldenrod;
 
     text-align: center;
 
     border-bottom: 10cm;
-    border-radius: 10cm;
     border-color: blue;
+    border-radius: 10cm;
+    
 }

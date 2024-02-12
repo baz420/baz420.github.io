@@ -11,6 +11,8 @@ import "./appconfig.json";
 
 //  imgContainer.appendChild(imgCanvas);
 const myOutput = document.getElementById("myOutput");
+const worldText = document.getElementById("worldText");
+const mousePositionText = document.getElementById("mousePositionText")
 
 
 
@@ -23,13 +25,24 @@ const printMousePosition = () => {
 	
 }
 
-const flashText = () => {
-	myOutput.style.color = `hsl(${Math.floor(Math.random() * 359)},100%,30%)`;
+const flashText = (paragraph) => {
+	paragraph.style.color = `hsl(${Math.floor(Math.random() * 359)},100%,30%)`;
 }
 
-setInterval(printMousePosition, 100)
-setInterval(flashText, 1000)
+const printWorld = () => {
 
+}
+
+
+const onTick = () => {
+	printWorld();
+	printMousePosition();
+	flashText(worldText);
+	setTimeout(null, 1)
+	flashText(mousePositionText);
+
+}
+setInterval(onTick, 600);
 
  
 var output = document.getElementById("output");
