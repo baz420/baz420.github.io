@@ -1,6 +1,7 @@
 import * as a1lib from "@alt1/base"
 
 import "./index.html";
+import "./index.css"
 import "./appconfig.json";
 
 // const imgContainer = document.getElementById("img-container");
