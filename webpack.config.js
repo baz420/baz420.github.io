@@ -9,7 +9,7 @@ module.exports = {
     entry: {
         //each entrypoint results in an output file
         //so this results in an output file called 'main.js' which is built from src/index.ts
-        "main": "./index.js"
+        "main": "./main.js"
     },
     output: {
         path: path.resolve(__dirname, "docs"),
