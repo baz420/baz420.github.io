@@ -12,8 +12,18 @@ import "./appconfig.json";
 //  imgContainer.appendChild(imgCanvas);
 const myOutput = document.getElementById("myOutput");
 
-myOutput.textContent = a1lib.getMousePosition();
 
+
+
+
+const printMousePosition = () => {
+	if (alt1.rsActive) {
+		myOutput.textContent = a1lib.getMousePosition();
+	}
+	
+}
+
+document.addEventListener("mousemove", printMousePosition);
 
 
 
