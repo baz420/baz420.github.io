@@ -12,7 +12,7 @@ import "./appconfig.json";
 //  imgContainer.appendChild(imgCanvas);
 const myOutput = document.getElementById("myOutput");
 
-myOutput.textContent = alt1.mousePosition;
+myOutput.textContent = a1lib.getMousePosition();
 
 
 
