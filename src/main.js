@@ -26,7 +26,7 @@ const printWorld = () => {
 
 const printMousePosition = () => {
 	let mousePos = a1lib.getMousePosition();
-	mousePositionText.textContent = `X: ${mousePos.x}, Y: ${mousePos.y}`;
+	mousePositionText.textContent = `Mouse X: ${mousePos.x}, Y: ${mousePos.y}`;
 	
 	
 }
@@ -38,7 +38,7 @@ const flashText = (paragraph) => {
 
 setInterval(printWorld, 1);
 setInterval(printMousePosition, 1);
-
+setInterval(flashText(worldText), 100)
 
  
 var output = document.getElementById("output");
