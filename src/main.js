@@ -29,8 +29,13 @@ const x = new TargetMobReader();
 
 
 const printWorld = () => {
-	const zyg = x.read(imageDataFromUrl("./yo.png"));
-	worldText.textContent = `World: ${alt1.lastWorldHop} || Target: ${zyg.name}, HP: ${zyg.hp}`
+	const zyg = x.read(imageDataFromUrl("./vindy.png"));
+	if (zyg != undefined) {
+		worldText.textContent = `Target: ${zyg.name}, HP: ${zyg.hp}`
+	} else {
+		worldText.textContent = `World: ${alt1.lastWorldHop}`;
+	}
+	
 }
 
 const printMousePosition = () => {
