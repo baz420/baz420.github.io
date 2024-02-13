@@ -29,7 +29,7 @@ const x = new TargetMobReader();
 
 
 const printWorld = () => {
-	const zyg = x.read(imageDataFromUrl("./vindy.png"));
+	const zyg = x.read(imageDataFromUrl("./vindy.PNG"));
 	if (zyg != undefined) {
 		worldText.textContent = `Target: ${zyg.name}, HP: ${zyg.hp}`
 	} else {
