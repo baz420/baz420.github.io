@@ -1,8 +1,5 @@
 
 import * as a1lib from "@alt1/base";
-import * as OCR from "@alt1/ocr";
-import * as DM from "@alt1/dropsmenu"
-import TargetMobReader from "@alt1/targetmob"
 import * as ability from "@alt1/ability"
 
 import "./index.html";
