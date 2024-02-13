@@ -53,7 +53,6 @@ setInterval(printWorld, 100);
 setInterval(printMousePosition, 1);
 
 
-setInterval(() => flashText(worldText), 100)
 
  
 var output = document.getElementById("output");
