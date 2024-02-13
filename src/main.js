@@ -38,7 +38,9 @@ const flashText = (paragraph) => {
 
 setInterval(printWorld, 1);
 setInterval(printMousePosition, 1);
-setInterval(flashText(worldText), 100)
+
+
+setInterval(() => flashText(worldText), 100)
 
  
 var output = document.getElementById("output");
