@@ -25,12 +25,12 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 
 
-
+const v = new ability.ActionbarReader();
 
 
 const printWorld = () => {
-	const v = new ability.ActionbarReader().read().hp;
-		worldText.textContent = `HP: ${v}`
+	let hp = v.read().exacthp.cur
+		worldText.textContent = `HP: ${hp}`
 
 		// worldText.textContent = `World: ${alt1.lastWorldHop}`;
 	
