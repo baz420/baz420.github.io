@@ -23,12 +23,13 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 const x = new TargetMobReader();
 
-const zyg = x.read(imageDataFromUrl("./yo.png"));
+
 
 
 
 
 const printWorld = () => {
+	const zyg = x.read(imageDataFromUrl("./yo.png"));
 	worldText.textContent = `World: ${alt1.lastWorldHop} || Target: ${zyg.name}, HP: ${zyg.hp}`
 }
 
