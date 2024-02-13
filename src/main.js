@@ -26,16 +26,16 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 
 
-const v = new ability.AbilityState();
+// const v = new ability.AbilityState();
 
 
 
-const printWorld = async() => {
-	let hp = await v.read().exacthp.cur
-	worldText.textContent = `HP: ${hp}`
+// const printWorld = async() => {
+// 	let hp = await v.read().exacthp.cur
+// 	worldText.textContent = `HP: ${hp}`
 
-		// worldText.textContent = `World: ${alt1.lastWorldHop}`;
-}
+// 		// worldText.textContent = `World: ${alt1.lastWorldHop}`;
+// }
 
 const printMousePosition = () => {
 	let mousePos = a1lib.getMousePosition();
@@ -49,7 +49,7 @@ const flashText = (paragraph) => {
 }
 
 
-setInterval(printWorld, 100);
+// setInterval(printWorld, 100);
 setInterval(printMousePosition, 1);
 
 
