@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@alt1/ability": "^1.0.0-alpha.6",
     "@alt1/base": "^1.0.0-alpha.7",
     "@alt1/bosstimer": "^1.0.0-alpha.6",
     "@alt1/dropsmenu": "^1.0.0-alpha.6",

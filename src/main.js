@@ -3,6 +3,7 @@ import * as a1lib from "@alt1/base";
 import * as OCR from "@alt1/ocr";
 import * as DM from "@alt1/dropsmenu"
 import TargetMobReader from "@alt1/targetmob"
+import * as ability from "@alt1/ability"
 
 import "./index.html";
 import "./index.css"
@@ -21,7 +22,6 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 
 
-const x = new TargetMobReader();
 
 
 
@@ -29,12 +29,11 @@ const x = new TargetMobReader();
 
 
 const printWorld = () => {
-	const zyg = x.read(imageDataFromUrl("./vindy.PNG"));
-	if (zyg != undefined) {
-		worldText.textContent = `Target: ${zyg.name}, HP: ${zyg.hp}`
-	} else {
-		worldText.textContent = `World: ${alt1.lastWorldHop}`;
-	}
+	const v = new ability.ActionbarReader().read().hp;
+		worldText.textContent = `HP: ${v}`
+
+		// worldText.textContent = `World: ${alt1.lastWorldHop}`;
+	
 	
 }
 
