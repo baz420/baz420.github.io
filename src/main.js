@@ -21,7 +21,7 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 
 const printWorld = () => {
-	worldText.textContent = `World: ${alt1.currentWorld}`
+	worldText.textContent = `World: ${alt1.lastWorldHop}`
 }
 
 const printMousePosition = () => {
@@ -38,6 +38,7 @@ const flashText = (paragraph) => {
 
 setInterval(printWorld, 1);
 setInterval(printMousePosition, 1);
+
 
  
 var output = document.getElementById("output");
