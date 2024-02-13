@@ -49,7 +49,7 @@ const flashText = (paragraph) => {
 }
 
 
-setInterval(printWorld, 1);
+setInterval(printWorld, 100);
 setInterval(printMousePosition, 1);
 
 
