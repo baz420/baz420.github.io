@@ -1,6 +1,11 @@
 {
   "dependencies": {
     "@alt1/base": "^1.0.0-alpha.7",
+    "@alt1/bosstimer": "^1.0.0-alpha.6",
+    "@alt1/dropsmenu": "^1.0.0-alpha.6",
+    "@alt1/ocr": "^1.0.0-alpha.7",
+    "@alt1/targetmob": "^1.0.0-alpha.6",
+    "alt1": "^0.0.7",
     "css-loader": "^6.10.0"
   },
   "devDependencies": {

@@ -1,8 +1,13 @@
-import * as a1lib from "@alt1/base"
+
+import * as a1lib from "@alt1/base";
+import * as OCR from "@alt1/ocr";
+import * as DM from "@alt1/dropsmenu"
+import TargetMobReader from "@alt1/targetmob"
 
 import "./index.html";
 import "./index.css"
 import "./appconfig.json";
+import { imageDataFromUrl } from "@alt1/base/dist/imagedetect";
 
 // const imgContainer = document.getElementById("img-container");
 //  var imageData = a1lib.capture(100,100,400,400);
@@ -16,12 +21,15 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 
 
+const x = new TargetMobReader();
+
+const zyg = x.read(imageDataFromUrl("./yo.png"));
 
 
 
 
 const printWorld = () => {
-	worldText.textContent = `World: ${alt1.lastWorldHop}`
+	worldText.textContent = `World: ${alt1.lastWorldHop} || Target: ${zyg.name}, HP: ${zyg.hp}`
 }
 
 const printMousePosition = () => {
