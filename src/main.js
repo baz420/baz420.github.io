@@ -9,6 +9,7 @@ import "./index.html";
 import "./index.css"
 import "./appconfig.json";
 import { imageDataFromUrl } from "@alt1/base/dist/imagedetect";
+import AbilityReader, { AbilityState } from "@alt1/ability";
 
 // const imgContainer = document.getElementById("img-container");
 //  var imageData = a1lib.capture(100,100,400,400);
@@ -25,16 +26,15 @@ const mousePositionText = document.getElementById("mousePositionText")
 
 
 
-const v = new ability.ActionbarReader();
+const v = new ability.AbilityState();
 
 
-const printWorld = () => {
-	let hp = v.read().exacthp.cur
-		worldText.textContent = `HP: ${hp}`
+
+const printWorld = async() => {
+	let hp = await v.read().exacthp.cur
+	worldText.textContent = `HP: ${hp}`
 
 		// worldText.textContent = `World: ${alt1.lastWorldHop}`;
-	
-	
 }
 
 const printMousePosition = () => {
