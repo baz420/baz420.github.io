@@ -1,0 +1,16 @@
+{
+	"appName": "Necromancy",
+	"description": "",
+	"appUrl": "./index.html",
+	"configUrl": "./appconfig.json",
+	"iconUrl": "./icon.png",
+	"defaultWidth": 237,
+	"defaultHeight": 166,
+	"minWidth": 50,
+	"minHeight": 50,
+	"maxWidth": 1000,
+	"maxHeight": 1000,
+	"requestHandlers": [ ],
+	"activators": [	],
+	"permissions": "pixel, gamestate, overlay"
+}

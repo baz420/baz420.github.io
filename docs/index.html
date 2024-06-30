@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+			#Settings,
+			body {
+				display: none;
+			}
+		</style>
+	</head>
+	<body>
+		
+		<div id="output"></div>
+		<div id="Settings">
+			<div class="container">
+				<h2>Settings - v1.6.0</h2>
+				<div class="flex setting"><input type="checkbox" id="GhostSettings" data-setting="ghostSettings"> Hide Settings Cog (bottom right corner) unless hovered</div>
+				<div class="flex setting"><input type="checkbox" id="CheckForTarget" data-setting="checkForTarget">Hide overlay if no active target is found</div>
+				<div class="flex setting"><input type="checkbox" id="Offhand" data-setting="offhand95"> Using T95 Offhand</div>
+				<div class="flex setting"><input type="checkbox" id="SingleRowNecrosis" data-setting="singleNecrosis"> Hide 2nd row of Necrosis Stacks</div>
+				<div class="flex setting"><input type="checkbox" id="GappedNecrosis" data-setting="gappedNecrosis">Add a gap between the 1-6 and 6-12 set of Necrosis Stacks</div>
+				<div class="flex setting"><input type="checkbox" id="LivingDeathCooldown" data-setting="livingDeathCooldown">Only display the Active Timer for Living Death - as the Cooldown timer can be inaccurate.</div>
+				<div class="flex setting"><input type="checkbox" id="LivingDeathPlacement" data-setting="livingDeathPlacement">Move Living Death to right side of Necrosis Stacks</div>
+				<div class="flex setting"><input type="checkbox" id="ActiveConjureTimers" data-setting="activeConjureTimers">Track time remaining for summoned Conjures</div>
+				<div class="flex setting"><input type="checkbox" id="ForcedConjures" data-setting="forcedConjures">Force "active" the last 10s of Conjures *</div>
+				<small>* Conjures cannot be reliably detected in the last 10s. This setting forces them to appear as active during this time - even if the player unsummons them.</small>
+				<h3>Overlay (Beta / Experimental)</h3>
+				<small>Make sure to enable "Show Overlay" for this app in your Alt1 settings.</small><br><br>
+				<div class="flex setting"><input type="checkbox" id="ShowOverlay" data-setting="activeOverlay">Enable Overlay - App will refresh when toggled. After overlay position has been set - you must leave this app open but you may 'Minimize' it by pressing the _ icon in the top right corner and move it out of the way.</div>
+				<p>The Overlay currently has a small delay. I'm working on improving this.</p>
+				<button id="OverlayPosition" data-setting="overlayPosition">Set Overlay Position</button>
+				<br><small>After clicking the button - move your mouse to where you want the overlay to appear then press alt+1 to set overlay to that position.</small>
+				<h3>Tracked Components</h3>
+				<div class="flex setting"><input class="tracker setting" type="checkbox" id="ConjuresTracker" data-setting="conjuresTracker">Hide Conjures</div>
+				<div class="flex setting"><input class="tracker setting" type="checkbox" id="SoulStracker" data-setting="soulsTracker">Hide Residual Souls</div>
+				<div class="flex setting"><input class="tracker setting" type="checkbox" id="BloatTracker" data-setting="bloatTracker">Hide Bloat</div>
+				<div class="flex setting"><input class="tracker setting" type="checkbox" id="NecrosisTracker" data-setting="necrosisTracker">Hide Necrosis Stacks</div>
+				<div class="flex setting"><input class="tracker setting" type="checkbox" id="LivingDeathTracker" data-setting="livingDeathTracker">Hide Living Death</div>
+				<h3>UI Colors</h3>
+				<div class="flex"><input value="#52f9fa" type="color" id="SoulBgColor" class="colors" data-setting="soulBgColor"><label for="SoulBgColor">Residual Souls</label></div>
+				<div class="flex"><input value="#9205e4" type="color" id="NecrosisDefaultBgColor" class="colors" data-setting="necrosisDefaultBgColor"><label for="NecrosisDefaultBgColor">Necrosis 0-4 Stacks</label></div>
+				<div class="flex"><input value="#fd7d00" type="color" id="NecrosisFreestyleBgColor" class="colors" data-setting="necrosisFreecastBgColor"><label for="NecrosisFreestyleBgColor">Necrosis 6-10 Stacks</label></div>
+				<div class="flex"><input value="#ff0000" type="color" id="NecrosisCappedBgColor" class="colors" data-setting="necrosisCappedBgColor"><label for="NecrosisCappedBgColor">Necrosis 12 Stacks</label></div>
+				<div class="flex"><input value="#ff0000" type="color" id="BloatNotchColor" class="colors"  data-setting="bloatNotchColor"><label for="BloatNotchColor">Bloat Notches</label></div>
+				<div class="flex"><button id="RevertDefaultColors">Revert to Default Colors</button></div>
+				<h3>UI Scale</h3>
+				Job Gauge <br>
+				<div class="flex setting"><input class="scale" type="range" min="30" max="200" value="100" id="JobGaugeScale" data-setting="jobGaugeScale" list="rangeList"><output for="JobGaugeScale" id="JobGaugeScaleOutput"></output>%</div>
+				Conjures <br>
+				<div class="flex setting"><input class="scale" type="range" min="30" max="200" value="100" id="ConjuresScale" data-setting="conjureScale" list="rangeList"><output for="ConjuresScale" id="ConjuresScaleOutput"></output>%</div>
+				Residual Souls <br>
+				<div class="flex setting"><input class="scale" type="range" min="30" max="200" value="100" id="SoulsScale" data-setting="soulScale" list="rangeList"><output for="SoulsScale" id="SoulsScaleOutput"></output>%</div>
+				Bloat <br>
+				<div class="flex setting"><input class="scale" type="range" min="30" max="200" value="100" id="BloatScale" data-setting="bloatScale" list="rangeList"><output for="BloatScale" id="BloatScaleOutput"></output>%</div>
+				Living Death <br>
+				<div class="flex setting"><input class="scale" type="range" min="30" max="200" value="100" id="LivingDeathScale" data-setting="livingDeathScale" list="rangeList"><output for="LivingDeathScale" id="LivingDeathScaleOutput"></output>%</div>
+				Necrosis Stacks <br>
+				<div class="flex setting"><input class="scale" type="range" min="30" max="200" value="100" id="NecrosisScale" data-setting="necrosisScale" list="rangeList"><output for="NecrosisScale" id="NecrosisScaleOutput"></output>%</div>
+				<datalist id="rangeList">
+					<option>100</option>
+				</datalist>
+				<h3>Sound Notifications</h3>
+				<h4>Capped Residual Souls</h4>
+				<div class="flex setting"><input type="checkbox" id="PlayCappedSoulsAlert" data-setting="playCappedSoulsAlert">Play an audio alert when you reach&nbsp;<span id="SoulsCap"></span>&nbsp;Residual Souls</div>
+				<div class="flex setting">Alert: <select class="audio-file" id="SoulsAlertAudio" data-setting="soulsAlertAudio">
+				<option value="alarm2">Alarm 2</option>
+				<option value="notification1">Notification 1</option>
+				<option value="notification2">Notification 2</option>
+				<option value="notification3">Notification 3</option>
+				<option value="bell">Bell</option>
+				<option value="elevator">Elevator</option>
+				<option value="nuclear">Nuclear</option></select></div>
+				<div class="flex setting">Loop<input type="checkbox" id="LoopCappedSoulsAlert" data-setting="loopCappedSoulsAlert"> Volume<input type="range" min="1" max="100" value="100" id="SoulsAlertAudioVolume"><output for="SoulsAlertAudioVolume" id="SoulsAlertAudioVolumeOutput"></output>%</div>
+				<h4>Capped Necrosis Stacks</h4>
+				<div class="flex setting"><input type="checkbox" id="PlayCappedNecrosisAlert" data-setting="playCappedNecrosisAlert">Play an audio alert when you reach 12 Necrosis Stacks</div>
+				<div class="flex setting">Alert: <select class="audio-file" id="NecrosisAlertAudio" data-setting="necrosisAlertAudio">
+				<option value="alarm2">Alarm 2</option>
+				<option value="notification1">Notification 1</option>
+				<option value="notification2">Notification 2</option>
+				<option value="notification3">Notification 3</option>
+				<option value="bell">Bell</option>
+				<option value="elevator">Elevator</option>
+				<option value="nuclear">Nuclear</option></select></div>
+				<div class="flex setting">Loop<input type="checkbox" id="LoopCappedNecrosisAlert" data-setting="loopCappedNecrosisAlert">Volume<input type="range" min="1" max="100" value="100" id="NecrosisAlertAudioVolume"><output for="NecrosisAlertAudioVolume" id="NecrosisAlertAudioVolumeOutput"></output>%</div>
+				<h3>Interface Search Speed</h3>
+				<p>Lower value will detect changes faster but may cause hits to overall performance. Adjust at your own risk - although if it causes any issues you can always slow it back down. It is heavily recommended to set this as low as you can without encountering performance issues.
+					</p><p><strong>**Requires a MANUAL RESTART of the app after adjusting.**</strong></p>
+				<div class="flex setting"><input class="speed" type="range" min="10" max="300" value="125" step="5" id="LoopSpeed" data-setting="loopSpeed"><output for="LoopSpeed" id="LoopSpeedOutput"></output>ms</div>
+				<h3>Hard Reset</h3>
+				<p>Sometimes I break localStorage. This will clear local storage, reset all settings to default, and reload the app in an attempt to fix things.</p>
+				<div class="flex"><button id="ResetAllSettings">Reset All Settings</button></div>
+			</div>
+		</div>
+		<div id="SettingsButton" class="nisimgbutton"><span>⚙︎</span></div>
+		<div id="JobGauge">
+			<ul id="Conjures" class="tracker component" data-setting="conjuresTracker">
+				<li id="Skeleton" class="conjure skeleton" data-timer="11" data-remaining="12"></li>
+				<li id="Zombie" class="conjure zombie" data-timer="11" data-remaining="12"></li>
+				<li id="Ghost" class="conjure ghost" data-timer="11" data-remaining="12"></li>
+				<li id="special-attack" class="conjure" data-active="false">special</li>
+			</ul>
+			<ul id="Souls" class="tracker component" data-souls="0" data-offhand="95" data-setting="soulsTracker">
+				<li class="soul"></li>
+				<li class="soul"></li>
+				<li class="soul"></li>
+				<li class="soul"></li>
+				<li class="soul"></li>
+			</ul>
+			<div id="Bloat" class="tracker component" data-timer="0" data-setting="bloatTracker">
+				<ul id="Notches">
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				<li class="notch"></li>
+				</ul>
+			</div>
+			<div id="NecrosisContainer">
+				<div id="LivingDeath" class="tracker component inactive" data-timer="0" data-cast="0" data-remaining="60" data-setting="livingDeathTracker">
+					<span></span>
+				</div>
+				<ul id="Necrosis" class="tracker component" data-stacks="0" data-setting="necrosisTracker">
+					<ul>
+						<li class="stack"></li>
+						<li class="stack"></li>
+					</ul>
+					<ul>
+						<li class="stack"></li>
+						<li class="stack"></li>
+					</ul>
+					<ul>
+						<li class="stack"></li>
+						<li class="stack"></li>
+					</ul>
+					<ul>
+						<li class="stack"></li>
+						<li class="stack"></li>
+					</ul>
+					<ul>
+						<li class="stack"></li>
+						<li class="stack"></li>
+					</ul>
+					<ul>
+						<li class="stack"></li>
+						<li class="stack"></li>
+					</ul>
+				</ul>
+			</div>
+		</div>
+		<div id="OverlayCanvasOutput">
+			<canvas willReadFrequently="true" width="1000" height="1000"></canvas>
+		</div>
+		<script src="./main.js" defer></script>
+	</body>
+</html>
